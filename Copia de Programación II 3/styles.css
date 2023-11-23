@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #232323;
+    --text-color: #F4F4F4;
+    --accent-color: #01C38E;
+    --dark-color: #181818;
+    --star-color: #ffff00;
+    --title-font: 'Concert One', cursive;
+    --paragraph-font: 'Oswald', sans-serif;
+    --width-container: 69.375em;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+    letter-spacing: 0.125em;
+}
+
+h2, h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+.nosotros, .container{
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+.alinear-centrado {
+    align-items: center;
+}
+
+.btn, .categoria a {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: 900;
+    padding: 0.625em 1.875em;
+    border: none;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.btn:hover, .categoria a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    padding: 0.9375em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    height: 2em;
+}
+
+header nav {
+    width: 40%;
+}
+
+header nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+header nav ul a:hover{
+    color: var(--accent-color);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 1.25em;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 1.5625em;
+    height: 0.1875em;
+    background-color: #01C38E;
+    margin: 0.375em 0;
+}
+
+/* HOME */
+.portada img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+section.nosotros {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+
+}
+
+section.nosotros div {
+    text-align: left;
+    max-width: 50%;
+
+}
+
+section.nosotros p{
+    margin-top: 2em;
+    margin-left: 3em;
+    text-align: justify;
+}
+
+section.nosotros img {
+ height: 25em;
+ margin-top: 1.875em;
+ border-radius: 12px;
+}
+
+h2{
+    margin-top: 1.875em;
+    margin-left: 1.7em;
+
+}
+
+section .pelicula {
+    width: 100%;
+    padding: 4em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .pelicula .modal-card:hover, .categoria div img:hover {
+    box-shadow: 5px 5px 10px var(--accent-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+section .pelicula .modal-card {
+    height: 21.8em;
+    width: 15.9em;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modal-info {
+    padding: 1.25em;
+}
+
+.modal-info p {
+    padding-bottom: 1em;
+}
+
+.modal-info span {
+    color: var(--accent-color);
+}
+
+.star-box { /*NO TOCAR*/
+    padding: 1.25em 0;
+    color: var(--accent-color);
+}
+
+
+
+/* PERSONAJES */
+.personajes {
+    position: relative;
+    width: 100%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.personajes .categoria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.categoria div img {
+    margin: 0 1rem;
+    border-radius: 30px;
+    width: 12.5em;
+}
+.personajes .slider-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.personajes img {
+    width: 6.25em;
+    border-radius: 30px;
+    margin-right: 0.625em;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* RECOMENDACIÓN */
+.content-recomedado {
+    max-width: 43.75em;
+    align-content: center;
+}
+
+.content-recomedado ul li {
+    padding: 1rem 0 0 0;
+    font-family: var(--paragraph-font);
+    color: var(--accent-color);
+}
+.content-recomedado p {
+    text-align: justify;
+}
+
+.pelicula {
+    align-items: center;
+    object-fit: cover;
+}
+.full-page{
+    background-image: url('img/Section\ 1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 3.75em;
+
+}
+
+
+/* FOOTER */
+footer{
+    margin-top: 4em;
+    text-align: center;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center
+}
+
+footer ul li {
+    padding: 2em;
+}
+
+footer ul li i {
+    font-size: 2rem;
+}
+
+footer ul li i:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 1200px) {
+    .container{
+        font-size: 14px;
+    }
+    .portada img {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.nosotros img {
+        height: auto;
+        width: 100%;
+   }
+
+   section.nosotros div {
+    text-align: left;
+   }
+}
+
+@media (max-width: 768px) {
+
+    .container{
+        font-size: 14px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 4.375rem;
+        left: 0;
+        width: 100%;
+        background-color: #4a4646; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .portada img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .full-page {
+        height: 100%;
+        width: 100%;
+        background-size:contain;
+        background-attachment:fixed;
+    }
+
+    h2, h3 {
+        font-size: 1rem;
+    }
+
+    section.nosotros img {
+        height: auto;
+        margin-top: 1.875em;
+        width: 100%;
+   }
+
+    section.nosotros p,h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 0.875rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+
+   }
+
+    section.nosotros {
+        flex-direction: column;
+        text-align: center;
+   }
+
+    section.nosotros div {
+        max-width: 100%;
+        margin-left: 0;
+   }
+    
+    h2, h3, h4 {
+        font-size: 18px;
+   }
+
+    .pelicula {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-card {
+        width: 100%; 
+    }
+
+    .modal-info {
+        margin-top: 20px;
+    }
+
+    .texto-imagen {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content-recomedado p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .personajes .categoria {
+        width: 85%;
+    }
+}
